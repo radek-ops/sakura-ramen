@@ -48,7 +48,8 @@ body::-webkit-scrollbar {
    width: 100vw;
     display: flex;
     align-items: flex-end;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding-left: 150px;
 }
 
 
@@ -388,8 +389,9 @@ iframe {
         width: 100vw;
         display: flex;
         align-items: center;
-        justify-content:center;
+        justify-content:space-between;
         padding-top: 45px;
+        padding-left: 150px;
     }
 
 
@@ -451,7 +453,7 @@ iframe {
     width: 112px;
     padding-bottom: 8px;
 }
-
+s
 
 .picks {
     font-size: 32px;
@@ -538,7 +540,7 @@ td{
         display: flex;
         align-items: center;
         justify-content:flex-start;
-        padding-left: 40px;
+        padding-left: 50px;
         padding-top: 45px;
     }
 
