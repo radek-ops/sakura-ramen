@@ -4,7 +4,10 @@
     padding: 0;
 }
 
-html {
+html  {
+     margin: 0;
+    border: 0;
+    padding: 0;
     scroll-behavior: smooth;
     /*   lässt die seite beim klick auf den link  sanft scrollen    */
 }
@@ -13,7 +16,9 @@ html {
 /* Hide scrollbar for Chrome, Safari and Opera */
 body::-webkit-scrollbar {
     display: none;
-
+      margin: 0;
+    border: 0;
+    padding: 0;
     /* IE and Edge */
     -ms-overflow-style: none;
     /* Firefox */
@@ -33,15 +38,17 @@ body::-webkit-scrollbar {
 
 
 .navbar_total {
+    display: flex;
+    justify-content: center;
     height: 112px;
     display: flex;
 }
 
 .sakura_logo {
+   width: 100vw;
     display: flex;
-    padding-left: 150px;
-    padding-right: 400px;
     align-items: flex-end;
+    justify-content: space-around;
 }
 
 
@@ -56,7 +63,7 @@ body::-webkit-scrollbar {
     width: 100vw;
     display: flex;
     padding-top: 45px;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     color: white;
     font-family: "Raleway", sans-serif;
@@ -267,9 +274,10 @@ h3 {
 
 .ramen2_meal_price {
     display: flex;
-    padding-bottom: 56px;
     justify-content: flex-end;
-    align-items: center;
+    padding-bottom: 56px;
+    
+    
 }
 
 
@@ -293,6 +301,7 @@ td {
 
 
 .ramen3_table {
+
     width: 300px;
 }
 
@@ -307,6 +316,10 @@ td {
 footer {
     background-color: #0a141e;
     height: 144px;
+     display: flex;
+    align-items: center;
+    justify-content: space-between;
+
 }
 
 
@@ -335,21 +348,10 @@ iframe {
 
 
 
-
-
-.all_logos {
-    height: 144px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-}
-
-
-
 .sakuralogo {
     display: flex;
-    padding-left: 170px;
+    padding-left: 100px;
+    align-items: center;
 }
 
 
@@ -357,9 +359,10 @@ iframe {
 
 .all_media_logos {
     display: flex;
-    padding-right: 170px;
-    gap: 20px;
-    /* flexbox abstände werden geändert */
+    padding-right: 100px;
+    align-items: center;
+    gap: 16px;
+    
 }
 
 
@@ -375,88 +378,60 @@ iframe {
     height: 40px;
 }
 
-@media (max-width: 1400px){
-
-    
-    .sakura_logo {
-   
-    padding-left: 150px;
-    padding-right: 0;
-    
-}
-}
 
 
 
-@media (max-width: 1124px) {
 
-    .ramen1,
-    .ramen3 {
+@media (max-width: 1280px) {
+  
+     .sakura_logo {
         width: 100vw;
         display: flex;
         align-items: center;
-        flex-direction: column;
-        padding: 0;
+        justify-content:center;
+        padding-top: 45px;
     }
 
-
-    .ramen2 {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        padding: 0;
-    }
-
-
-    .meal_price {
-        padding-top: 40px;
-    }
-    
-
-    .ramen1_meal_price,
-    .ramen2_meal_price {
-        padding-bottom: 112px;
-    }
-
-
-
-
-    .our_dishes {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-
-}
-
-
-@media (max-width: 1065px) {
-    .sakura_logo {
-        display: flex;
-    }
 
 
     .navbar_total {
-        height: 112px;
-        display: flex;
-        justify-content: space-between;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    row-gap:350px;
+    
+       
+}
+
+    .navbar {
+        display: none;
+        font-size: 20px;
+        
     }
+
+
+    .phone {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        padding-right: 0px;
+        padding-left: 0px;
+        font-size: 20px;
+
+    }
+
 
 
     h1 {
 
-        font-size: 70px;
+        font-size: 72px;
         text-align: center;
         padding-left: 15px;
         padding-right: 15px;
 
     }
-
-
-
-    .headline_under {
-        font-size: 18px;
+ .headline_under {
+        font-size: 20px;
         display: flex;
         align-items: flex-start;
         justify-content: center;
@@ -464,179 +439,355 @@ iframe {
 
     }
 
-    .navbar {
-        font-size: 16px;
 
-    }
+    h2{
+    font-size: 64px;
+     padding-top: 96px;
+    padding-bottom: 48px;
+   }
 
+
+   .how_to_order_logos {
+    width: 112px;
+    padding-bottom: 8px;
+}
+
+
+.picks {
+    font-size: 32px;
+    display: flex;
+     padding-bottom: 96px;
+}
+
+
+   .ramen1_meal_price, .ramen2_meal_price {
+    
+    padding-bottom: 32px;
+}
+
+
+.ramen3_meal_price{
+
+    padding-bottom: 96px;
+}
+
+.meal_price{
+
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.ramen1,
+.ramen3 {
+    width: 100vw;
+    display: flex;
+    padding-left: 0px;
+    align-items: center;
+}
+
+
+.ramen2 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding-right: 0px;
+    white-space: nowrap;
+}
+
+.ramen2_img {
+    padding-left: 0px;
+}
+
+h3 {
+    display: flex;
+    justify-content: flex-start;
+    font-family: "Economica", sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    color: black;
+    padding-top: 16px;
+    padding-bottom: 8px;
+
+}
+
+.ramen3_table{
+
+    width: 200px;
+}
+
+
+td{
+
+    padding: 0;
+     font-size:24px;
+}
+
+.street_name{
+    font-size: 20px;
+    padding-bottom:48px;
+}
+
+    
 }
 
 
 
-
-@media (max-width: 860px) {
-
-    .navbar {
-        display: none;
-        justify-content: space-evenly;
-        align-items: center;
-        font-size: 16px;
-    }
-
-
-    .sakura_logo {
+@media (max-width: 767px) {
+     .sakura_logo {
+        width: 100vw;
         display: flex;
         align-items: center;
+        justify-content:flex-start;
+        padding-left: 40px;
         padding-top: 45px;
     }
 
-
     .sakura_logo_size {
-        display: flex;
-        width: 32px;
-        height: 32px;
-    }
-
-
-
-    h1 {
-        font-size: 60px;
-    }
-
-
-    .headline_under {
-        font-size: 16px;
-    }
-
-
-
-    .meal_price {
-        font-family: "Raleway", sans-serif;
-        justify-content: center;
-        align-items: center;
-        font-weight: bold;
-        font-size: 32px;
-        color: #675e54;
-        padding-left: 0px;
-        padding-right: 0px;
-    }
-
-    footer {
-    background-color: #0a141e;
-    height: 178px;
+    display: flex;
+    width: 40px;
+    height: 40px;
 }
 
-
-    .all_logos {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-
-    .sakuralogo {
-        display: flex;
-        padding: 0;
-        padding-bottom: 30px;
-        padding-top: 40px;
-    }
-
-
-    
-    .all_media_logos {
-        display: flex;
-        padding: 0;
-        margin: 0;
-       
-    }
-
-    
-}
-
-
-
-@media (max-width: 680px) {
-
-    .sakura_logo {
-        display: none;
-    }
-
-
-    h1 {
-        font-size: 40px;
-    }
 
 
     .navbar_total {
-        height: 112px;
-        display: flex;
-        justify-content: center;
-    }
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    row-gap:350px;
+          
+}
+
+    .navbar {
+        display: none;
+        font-size: 20px;
+            }
 
 
     .phone {
-        padding-right: 0px;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        padding-right: 24px;
         padding-left: 0px;
-    }
-
-
-    h2 {
-        font-size: 50px;
-        text-align: center;
-    }
-
-
-    .picks {
-        display: flex;
-        flex-direction: column;
-        gap: 100px
-    }
-
-    .menu_pic {
-        display: flex;
-        height: 280px;
-        width: 280px;
-
-    }
-
-
-    h3 {
-        display: flex;
-        font-size: 39px;
-        text-align: center;
-        width: auto;
-        white-space: nowrap;
-
-    }
-
-    .meal_price {
-        font-size: 22px;
-    }
-
-
-    .ramen3_table {
-        width: 220px;
-    }
-
-
-}
-
-
-@media (max-width: 500px) {
-    .street_name {
-        text-align: center;
         font-size: 16px;
     }
 
-
-    .sakuralogo_size {
-        height: 40px;
-    }
-
-    .map_marker{
-
-        width: 23px;
-       height: 23px;
-    }
+    .tel_number_look {
+    display: flex;
+    background-color: #9f0908;
+    border: 3px;
+    border-style: solid;
+    border-radius: 0.5em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    align-items: flex-end;
+    text-decoration: none;
+    color: white;
 }
+.phone_logo {
+    display: flex;
+    padding-right: 5px;
+    width: 16px;
+    height: 16px;
+}
+
+
+
+    h1 {
+
+        font-size: 44px;
+        text-align: center;
+        padding-left: 15px;
+        padding-right: 15px;
+
+    }
+ .headline_under {
+        font-size: 16px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        text-align: center;
+    }
+
+
+    h2{
+    font-size: 40px;
+     padding-top: 72px;
+    padding-bottom: 40px;
+   }
+
+   .picks {
+    font-family: "Economica", sans-serif;
+    font-weight: bold;
+    font-size: 56px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 72px;
+    flex-direction: column;
+}
+
+.how_to_order_logos {
+    width: 128px;
+    padding-bottom: 8px;
+}
+
+.how {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom:32px ;
+}
+
+
+
+.how3{
+   
+    padding-bottom: 0;
+}
+
+
+   h3 {
+    display: flex;
+    justify-content: flex-start;
+    font-family: "Economica", sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    color: black;
+    padding-top: 16px;
+    padding-bottom: 8px;
+
+}
+
+
+td{
+
+    padding: 0;
+     font-size:24px;
+}
+
+
+.ramen3_table {
+    padding-top: 24px;
+    width: 180px;
+}
+
+
+.menu_pic {
+    display: flex;
+    height: 343px;
+    width: 343px;
+}
+
+   .ramen1_meal_price, .ramen2_meal_price {
+       padding-bottom: 32px;
+      
+}
+
+
+.ramen3_meal_price{
+    padding-bottom: 72px;
+}
+
+
+.ramen1,
+.ramen3 {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    flex-direction: column;
+}
+
+
+.ramen2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+}
+
+.ramen2_img {
+   
+}
+
+.ramen2_meal_price {
+
+display: flex;
+justify-content: center;
+
+}
+
+.street_name{
+    font-size: 20px;
+    padding-bottom:40px;
+}
+
+
+
+footer{
+
+    height: 86px;
+}
+
+
+.sakuralogo {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content:start ;
+    padding-left:20px ;
+   
+
+}
+
+
+.sakuralogo_size {
+    width: 40px;
+    height: 40px;
+    object-fit:cover;
+    object-position: 0;
+        
+}
+
+
+.tripadvisor_logo,
+.facebook_logo,
+.instagrram_logo {
+    width: 32px;
+    height: 32px;
+}
+
+
+.all_media_logos {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    padding: 0;
+    height: 86px;
+    gap: 8px;
+      
+}
+
+
+.all_logos {
+     display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+
+}
+     
+    
+
+
